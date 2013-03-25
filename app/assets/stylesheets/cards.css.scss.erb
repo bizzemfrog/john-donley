@@ -1,0 +1,130 @@
+// Place all the styles related to the cards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  width:100%;
+  background: url(<%= asset_path 'background_03.png' %>);
+}
+#container {
+  margin: 0 auto;
+  width:728px;
+}
+#solitaire-logo {
+  margin: 8px auto;
+  width:240px;
+  height:80px;
+  background: url(<%= asset_path 'solitaire.png' %>);
+}
+.row {
+  width:728px;
+  min-height: 60px;
+}
+.spot {
+  display:inline-block;
+  .deck, .face-up-pile {
+    float:left;
+  }
+  .count-up-spot {
+    float:right;
+  }
+}
+.card {
+  height:128px;
+  width:96px;
+}
+<% (1..13).each do |v| %>
+  <% ["c", "d", "h", "s"].each do |s| %>
+    <% card_name = "#{s}-#{v}"%>
+    <% card_image = "cards/#{card_name}.png" %>
+    <%= ".#{card_name} { background: url( #{card_image} ) }" %>
+  <% end %>
+<% end %>
+#column-spot {
+  min-width:100px;
+  min-height:200px;
+  margin-top:20px;
+}
+#face-up-spot {
+  margin-left:70px;
+  .card-zone {
+    display:inline-block;
+    margin-left:-60px;
+  }
+}
+[class^="icon-"] {
+  width:40px;
+  height:40px;
+  display: inline-block;
+  background: url(<%= asset_path 'suits.png' %>);
+}
+.icon-spade {
+}
+.icon-heart {
+  background-position:-40px 0;
+}
+
+.icon-diamond {
+ background-position: 0 -40px;
+}
+
+.icon-club {
+  background-position: -40px -40px;
+}
+#deck-spot {
+  cursor:pointer;
+}
+.deck {
+  margin-left: 4px;
+  width:96px;
+  height:128px;
+  border: 2px dashed green;
+  position:relative;
+  cursor:pointer;
+  .face-down-card {
+    position: absolute;
+    width:96px;
+    height:128px;
+  }
+}
+.suit-pile .card {
+  position: absolute;
+}
+#suit-pile-spot {
+  float:right;
+  display: inline-block;
+}
+.suit-pile {
+  margin-left:2px;
+  width:96px;
+  height:128px;
+  float:right;
+  display:inline-block;
+  border: 2px dashed blue;
+}
+.column {
+  float:left;
+  display:inline-block;
+  margin-left:4px;
+  .column-default {
+    width:96px;
+    min-height:128px;
+    border: 2px dashed yellow;
+  }
+}
+.column > .card-zone {
+  margin-left:2px;
+  margin-right:2px;
+  margin-top:-130px;
+}
+.column .face-down-card, .face-down > .face-up {
+  margin-top:-126px;
+}
+.face-up > .face-up {
+  margin-top:-82px;
+}
+.face-up {
+  cursor:pointer;
+}
+.face-down-card {
+  background: url(<%= asset_path 'card-back.png' %>);
+}

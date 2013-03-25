@@ -1,0 +1,15 @@
+<div class="row">
+  <div id="solitaire-logo"></div>
+</div>
+<div class="row">
+  <div id="deck-spot" class="spot">
+  <form id="deal">
+  	<input type="submit" value="Deal">
+  </form>
+  </div>
+  <div id="face-up-spot" class="spot"></div>
+  <div id="suit-pile-spot" class="spot"></div>
+</div>
+<div class="row">
+  <div id="column-spot" class="spot"></div>
+</div>

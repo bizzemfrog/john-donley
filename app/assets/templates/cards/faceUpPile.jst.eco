@@ -1,0 +1,3 @@
+<% if @faceUpPile.models.length == 0: %>
+  <div id="empty-face-up-pile"></div>
+<% end %>

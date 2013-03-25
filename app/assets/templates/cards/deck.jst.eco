@@ -1,0 +1,3 @@
+<% for card in @deck.models: %>
+  <div class="face-down-card card"></div>
+<% end %>

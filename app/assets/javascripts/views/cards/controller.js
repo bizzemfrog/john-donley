@@ -13,6 +13,7 @@ Solitaire.Views.Controller = Backbone.View.extend( {
     },
   
   setUpCollectionsAndViews: function() {
+    this.collection.preloadImages()
     var shuffeledCards = this.collection.shuffle()
     this.shuffeledDeck = new Solitaire.Collections.Deck( shuffeledCards );
     this.deckView = new Solitaire.Views.Deck( { collection: this.shuffeledDeck } );

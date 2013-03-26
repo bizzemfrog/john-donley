@@ -3,6 +3,7 @@ Solitaire.Collections.Column = Backbone.Collection.extend({
   model: Solitaire.Models.Card,
   
   canDropDiv: function( card_div ) {
+    console.log( "testing column" )
     var faceUpCard = controller.faceUpPile.get( card_div.data("cid") )
     var row = controller.getColumnByCardCid( card_div.data("cid") )
     if ( faceUpCard ) {

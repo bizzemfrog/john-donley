@@ -7,7 +7,6 @@ development:
   adapter: postgresql
   database: cards_development
   host: localhost
-  user: cards
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -21,4 +20,3 @@ production:
   adapter: postgresql
   database: cards_production
   host: localhost
-  user: free_dl
